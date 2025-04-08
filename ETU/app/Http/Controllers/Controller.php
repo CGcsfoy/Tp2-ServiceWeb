@@ -11,7 +11,9 @@ use Illuminate\Routing\Controller as BaseController;
 define('OK', 200);
 define('CREATED', 201);
 define('NO_CONTENT', 204);
+define('UNAUTHORIZED', 401);
 define('NOT_FOUND', 404);
+define('TOO_MANY_REQUEST', 429);
 define('INVALID_DATA', 422);
 define('SERVER_ERROR', 500);
 
@@ -22,6 +24,7 @@ define('SEARCH_PAGINATION', 20);
 define('USER', 1);
 define('ADMIN', 2);
 
+/** * @OA\Info(title="TP2 API", version="0.1") */ 
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
